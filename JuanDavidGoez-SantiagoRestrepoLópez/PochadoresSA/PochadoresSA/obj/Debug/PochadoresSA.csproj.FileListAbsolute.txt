@@ -1,0 +1,15 @@
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.csprojResolveAssemblyReference.cache
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.Properties.Resources.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.csproj.GenerateResource.Cache
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\bin\Debug\PochadoresSA.exe.config
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\bin\Debug\PochadoresSA.exe
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\bin\Debug\PochadoresSA.pdb
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.exe
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.pdb
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmAdmin.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmRCliente.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.Login.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmRCuenta.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmVincular.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.frmTransfer.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmUsuario.resources
