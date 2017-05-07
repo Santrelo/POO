@@ -13,3 +13,5 @@ D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\Poch
 D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmVincular.resources
 D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.frmTransfer.resources
 D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\obj\Debug\PochadoresSA.FrmUsuario.resources
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\bin\Debug\BdAs1.accdb
+D:\JuanDavidGoez-SantiagoRestrepoLópez\PochadoresSA\PochadoresSA\bin\Debug\DbPonchadores1.accdb

@@ -13,21 +13,23 @@ namespace PochadoresSA
 {
     public partial class Login : Form
     {
-        
+       
         public Login()
         {
             InitializeComponent();
-          
+
+
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        public void btnIngresar_Click(object sender, EventArgs e)
         {
             String nombre = txbUsuario.Text;
             String clave = txbContraseña.Text;
             String tipo = "admin";
-         
+
+
             string EspacioEnBlanco = "";
-          
+
             if (txbUsuario.Text == EspacioEnBlanco || txbContraseña.Text == EspacioEnBlanco)
             {
                 if (txbUsuario.Text == EspacioEnBlanco)
@@ -54,14 +56,14 @@ namespace PochadoresSA
                     OleDbDataReader reader = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
 
                     Boolean ExistenciaRegistro = reader.HasRows;
-                    
+
 
                     if (ExistenciaRegistro)
                     {
 
                         while (reader.Read())
                         {
-
+                           
                             FrmAdmin log = new FrmAdmin();
                             log.Show();
                             Login cerrar = new Login();
@@ -87,7 +89,7 @@ namespace PochadoresSA
                     OleDbDataReader reader = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
 
                     Boolean ExistenciaRegistro = reader.HasRows;
-                   
+
 
                     if (ExistenciaRegistro)
                     {
@@ -96,10 +98,11 @@ namespace PochadoresSA
                         {
 
 
-                            FrmUsuario log = new FrmUsuario();
+                            FrmUsuario log = new FrmUsuario(nombre);
                             log.Show();
                             Login cerrar = new Login();
                             this.Hide();
+                          
 
                         }
 
@@ -132,6 +135,8 @@ namespace PochadoresSA
 
         }
     }
+
+   
 }
 
 

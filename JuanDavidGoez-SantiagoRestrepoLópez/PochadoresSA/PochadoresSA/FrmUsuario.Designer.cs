@@ -40,6 +40,7 @@
             this.btnTransferir.TabIndex = 0;
             this.btnTransferir.Text = "Transferir";
             this.btnTransferir.UseVisualStyleBackColor = true;
+            this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
             // 
             // btnMovimientos
             // 
@@ -59,6 +60,7 @@
             this.Controls.Add(this.btnTransferir);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.ResumeLayout(false);
 
         }
