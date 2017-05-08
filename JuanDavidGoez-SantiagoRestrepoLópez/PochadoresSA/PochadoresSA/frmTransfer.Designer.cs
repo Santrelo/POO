@@ -41,6 +41,18 @@
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.btnTransferir = new System.Windows.Forms.Button();
             this.cbCuentao = new System.Windows.Forms.ComboBox();
+            this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter2 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbConnection2 = new System.Data.OleDb.OleDbConnection();
+            this.oleDbSelectCommand3 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbInsertCommand3 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand3 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand3 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter3 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbConnection3 = new System.Data.OleDb.OleDbConnection();
             this.SuspendLayout();
             // 
             // label1
@@ -116,6 +128,30 @@
             this.cbCuentao.TabIndex = 8;
             this.cbCuentao.ValueMember = "Usuario";
             // 
+            // oleDbDataAdapter2
+            // 
+            this.oleDbDataAdapter2.DeleteCommand = this.oleDbDeleteCommand2;
+            this.oleDbDataAdapter2.InsertCommand = this.oleDbInsertCommand2;
+            this.oleDbDataAdapter2.SelectCommand = this.oleDbSelectCommand2;
+            this.oleDbDataAdapter2.UpdateCommand = this.oleDbUpdateCommand2;
+            // 
+            // oleDbConnection2
+            // 
+            this.oleDbConnection2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
+    "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
+            // 
+            // oleDbDataAdapter3
+            // 
+            this.oleDbDataAdapter3.DeleteCommand = this.oleDbDeleteCommand3;
+            this.oleDbDataAdapter3.InsertCommand = this.oleDbInsertCommand3;
+            this.oleDbDataAdapter3.SelectCommand = this.oleDbSelectCommand3;
+            this.oleDbDataAdapter3.UpdateCommand = this.oleDbUpdateCommand3;
+            // 
+            // oleDbConnection3
+            // 
+            this.oleDbConnection3.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
+    "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
+            // 
             // frmTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +187,17 @@
         private System.Data.OleDb.OleDbConnection oleDbConnection1;
         private System.Windows.Forms.Button btnTransferir;
         private System.Windows.Forms.ComboBox cbCuentao;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand2;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter2;
+        private System.Data.OleDb.OleDbConnection oleDbConnection2;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand3;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand3;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand3;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand3;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter3;
+        private System.Data.OleDb.OleDbConnection oleDbConnection3;
     }
 }

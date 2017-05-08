@@ -27,7 +27,7 @@ namespace PochadoresSA
             log.Show();
 
             FrmUsuario log1 = new FrmUsuario(nombre);
-            log.Show();
+            this.Hide();
 
         }
 

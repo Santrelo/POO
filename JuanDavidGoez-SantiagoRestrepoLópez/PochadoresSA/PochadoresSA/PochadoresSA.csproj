@@ -165,9 +165,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BdAs1.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="DbPonchadores1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
