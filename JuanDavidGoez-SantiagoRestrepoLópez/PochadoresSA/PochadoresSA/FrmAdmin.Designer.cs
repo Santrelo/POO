@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnRCliente);
             this.Name = "FrmAdmin";
             this.Text = "FrmAdmin";
+            this.Load += new System.EventHandler(this.FrmAdmin_Load);
             this.ResumeLayout(false);
 
         }

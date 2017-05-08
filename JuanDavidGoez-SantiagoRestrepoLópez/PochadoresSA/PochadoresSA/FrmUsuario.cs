@@ -38,7 +38,11 @@ namespace PochadoresSA
 
         private void btnMovimientos_Click(object sender, EventArgs e)
         {
+            frmMovimientos log = new frmMovimientos(nombre);
+            log.Show();
 
+            FrmUsuario log1 = new FrmUsuario(nombre);
+            this.Hide();
         }
     }
 }

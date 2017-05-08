@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.Data.SqlClient;
+
 
 namespace PochadoresSA
 {
@@ -120,7 +120,7 @@ namespace PochadoresSA
                             {
                                 int resta = -(Convert.ToInt32(cbValor.Text));
                                 string hola = "de "+ cbCuentad.Text;
-                                this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "')";
+                                this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "','" + actual + "')";
                                 this.oleDbConnection2.Open();
                                 this.oleDbDataAdapter2.InsertCommand.Connection = oleDbConnection2;
                                 this.oleDbDataAdapter2.InsertCommand.ExecuteNonQuery();
@@ -181,7 +181,7 @@ namespace PochadoresSA
                                     {
                                         int resta = +(Convert.ToInt32(cbValor.Text));
                                         string hola = "de "+ cbCuentao.Text;
-                                        this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "')";
+                                        this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "','" + id + "')";
                                         this.oleDbConnection3.Open();
                                         this.oleDbDataAdapter3.InsertCommand.Connection = oleDbConnection3;
                                         this.oleDbDataAdapter3.InsertCommand.ExecuteNonQuery();
@@ -205,7 +205,7 @@ namespace PochadoresSA
                                 this.oleDbConnection2.Close();
 
                             }
-
+                            
 
                         }
 
@@ -222,9 +222,9 @@ namespace PochadoresSA
                     this.oleDbConnection1.Close();
 
                 }
-                
-                    
-                
+
+                this.oleDbConnection1.Close();
+
             }
 
 

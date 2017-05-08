@@ -49,5 +49,10 @@ namespace PochadoresSA
             FrmAdmin cerrar = new FrmAdmin();
             this.Hide();
         }
+
+        private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
