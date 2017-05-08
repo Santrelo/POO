@@ -35,5 +35,10 @@ namespace PochadoresSA
         {
 
         }
+
+        private void btnMovimientos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

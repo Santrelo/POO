@@ -50,6 +50,7 @@
             this.btnMovimientos.TabIndex = 1;
             this.btnMovimientos.Text = "Movimientos";
             this.btnMovimientos.UseVisualStyleBackColor = true;
+            this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
             // 
             // FrmUsuario
             // 

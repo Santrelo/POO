@@ -14,45 +14,16 @@ namespace PochadoresSA
 {
     public partial class frmTransfer : Form
     {
-        private int actual;
+        
         public frmTransfer(string nombre)
         {
 
 
             InitializeComponent();
             this.nombre = nombre;
-            actual = getFirstId();
-            showData();
+            
         }
-
-        private int getFirstId()
-        {
-            this.oleDbDataAdapter2.SelectCommand.CommandText = "SELECT * FROM Vincular";
-            this.oleDbConnection2.Open();
-            this.oleDbDataAdapter2.SelectCommand.Connection = oleDbConnection2;
-            OleDbDataReader reader = this.oleDbDataAdapter2.SelectCommand.ExecuteReader();
-            reader.Read();
-            int id = Convert.ToInt32(reader["Id"].ToString());
-            this.oleDbConnection2.Close();
-            return id;
-        }
-
-        private void showData()
-        {
-            this.oleDbDataAdapter2.SelectCommand.CommandText = "SELECT * FROM Vincular WHERE Id =" + actual;
-            this.oleDbConnection2.Open();
-            this.oleDbDataAdapter2.SelectCommand.Connection = oleDbConnection2;
-            OleDbDataReader reader = this.oleDbDataAdapter2.SelectCommand.ExecuteReader();
-            while (reader.Read())
-            {
-               
-                
-                
-            }
-            this.oleDbConnection2.Close();
-        }
-
-
+        
     
     string nombre;
         private void frmTransfer_Load(object sender, EventArgs e)
@@ -101,7 +72,7 @@ namespace PochadoresSA
             else
             {
 
-                this.oleDbDataAdapter1.SelectCommand.CommandText = "SELECT Valor FROM Vincular WHERE Usuario = '" + nombre + "' and Cuenta ='" + cbCuentao.Text + "';";
+                this.oleDbDataAdapter1.SelectCommand.CommandText = "SELECT Valor,Id FROM Vincular WHERE Usuario = '" + nombre + "' and Cuenta ='" + cbCuentao.Text + "';";
                 this.oleDbConnection1.Open();
 
                 this.oleDbDataAdapter1.SelectCommand.Connection = oleDbConnection1;
@@ -115,9 +86,10 @@ namespace PochadoresSA
 
                     while (reader.Read())
                     {
+                        int actual = Convert.ToInt32(reader["Id"].ToString());
                         int valor = Convert.ToInt32(reader["Valor"].ToString());
                         int valor2 = Convert.ToInt32(cbValor.Text);
-                        if (valor > 2)
+                        if (valor >= valor2)
                         {
                             int total = valor - valor2;
 
@@ -147,7 +119,7 @@ namespace PochadoresSA
                             try
                             {
                                 int resta = -(Convert.ToInt32(cbValor.Text));
-                                string hola = "R";
+                                string hola = "de "+ cbCuentad.Text;
                                 this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "')";
                                 this.oleDbConnection2.Open();
                                 this.oleDbDataAdapter2.InsertCommand.Connection = oleDbConnection2;
@@ -208,7 +180,7 @@ namespace PochadoresSA
                                     try
                                     {
                                         int resta = +(Convert.ToInt32(cbValor.Text));
-                                        string hola = "R";
+                                        string hola = "de "+ cbCuentao.Text;
                                         this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "')";
                                         this.oleDbConnection3.Open();
                                         this.oleDbDataAdapter3.InsertCommand.Connection = oleDbConnection3;
