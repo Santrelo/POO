@@ -89,13 +89,14 @@ namespace PochadoresSA
                     OleDbDataReader reader = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
 
                     Boolean ExistenciaRegistro = reader.HasRows;
-
-
+                    
                     if (ExistenciaRegistro)
                     {
 
                         while (reader.Read())
                         {
+                           
+
 
 
                             FrmUsuario log = new FrmUsuario(nombre);
@@ -110,21 +111,32 @@ namespace PochadoresSA
                     else
                     {
                         this.oleDbConnection1.Close();
-                        if (txbUsuario.Text == nombre)
+
+                        this.oleDbDataAdapter1.SelectCommand.CommandText = "SELECT Contraseña FROM Usuarios WHERE Usuario = '" + nombre + "';";
+                        this.oleDbConnection1.Open();
+
+                        this.oleDbDataAdapter1.SelectCommand.Connection = oleDbConnection1;
+
+                        OleDbDataReader reader1 = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
+                        Boolean ExistenciaRegistro1 = reader1.HasRows;
+                        if (ExistenciaRegistro1)
                         {
-                            if (txbUsuario.Text == clave)
+
+                            while (reader1.Read())
                             {
 
-                            }
-                            else
-                            {
-                                MessageBox.Show("clave Incorrecta");
+                                MessageBox.Show("Contraseña Incorrecta.");
+
+
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Usuario Incorrecta");
+
+                            MessageBox.Show("Usuario no Existe");
+                            
                         }
+                        this.oleDbConnection1.Close();
                     }
                 }
             }

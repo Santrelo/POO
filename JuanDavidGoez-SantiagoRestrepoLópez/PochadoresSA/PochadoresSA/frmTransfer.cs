@@ -92,8 +92,7 @@ namespace PochadoresSA
                         if (valor >= valor2)
                         {
                             int total = valor - valor2;
-
-                            MessageBox.Show("su saldo actual es $" + valor + " y va a transferir $" + Convert.ToInt32(cbValor.Text) + " a la cuenta #" + cbCuentad.Text);
+                            MessageBox.Show("Saldo de la cuenta #"+cbCuentao.Text+" es #"+valor);
                             //quitar saldo. 
                             try
                             {
@@ -105,9 +104,9 @@ namespace PochadoresSA
                                 this.oleDbConnection2.Open();
                                 this.oleDbDataAdapter2.UpdateCommand.Connection = oleDbConnection2;
                                 this.oleDbDataAdapter2.UpdateCommand.ExecuteNonQuery();
+                                MessageBox.Show("El Nuevo Saldo de la cuenta #" + cbCuentao.Text + " es #" + total);
                                 this.oleDbConnection2.Close();
-                                MessageBox.Show("Registro actualizado correctamente.");
-
+                                
                             }
                             catch (System.Data.OleDb.OleDbException exp)
                             {
@@ -120,13 +119,12 @@ namespace PochadoresSA
                             {
                                 int resta = -(Convert.ToInt32(cbValor.Text));
                                 string hola = "de "+ cbCuentad.Text;
-                                this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "','" + actual + "')";
+                                this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "','" + actual + "','" + dateTimePicker1.Text + "')";
                                 this.oleDbConnection2.Open();
                                 this.oleDbDataAdapter2.InsertCommand.Connection = oleDbConnection2;
                                 this.oleDbDataAdapter2.InsertCommand.ExecuteNonQuery();
                                 this.oleDbConnection2.Close();
-                                MessageBox.Show("Registro agregado exitosamente");  //inform the user
-
+                               
                             }
                             catch (System.Data.OleDb.OleDbException exp)
                             {
@@ -155,7 +153,8 @@ namespace PochadoresSA
                                     
 
                                     int total1 = valor1 + valor2;
-
+                                    MessageBox.Show("Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + valor1);
+                                    MessageBox.Show("El nuevo Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + total1);
                                     //agregar  saldo. 
                                     try
                                     {
@@ -168,8 +167,7 @@ namespace PochadoresSA
                                         this.oleDbDataAdapter3.UpdateCommand.Connection = oleDbConnection3;
                                         this.oleDbDataAdapter3.UpdateCommand.ExecuteNonQuery();
                                         this.oleDbConnection3.Close();
-                                        MessageBox.Show("Registro actualizado correctamente.");
-
+                                       
                                     }
                                     catch (System.Data.OleDb.OleDbException exp)
                                     {
@@ -181,13 +179,12 @@ namespace PochadoresSA
                                     {
                                         int resta = +(Convert.ToInt32(cbValor.Text));
                                         string hola = "de "+ cbCuentao.Text;
-                                        this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "','" + id + "')";
+                                        this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "','" + id + "','" + dateTimePicker1.Text+ "')";
                                         this.oleDbConnection3.Open();
                                         this.oleDbDataAdapter3.InsertCommand.Connection = oleDbConnection3;
                                         this.oleDbDataAdapter3.InsertCommand.ExecuteNonQuery();
                                         this.oleDbConnection3.Close();
-                                        MessageBox.Show("Registro agregado exitosamente");  //inform the user
-
+                                       
                                     }
                                     catch (System.Data.OleDb.OleDbException exp)
                                     {
@@ -211,8 +208,9 @@ namespace PochadoresSA
 
                         else
                         {
-                            MessageBox.Show("No es posible tranferir esta cantidad debido a que su saldo es " + valor);
+                            MessageBox.Show("No es posible tranferir esta cantidad debido a que el saldo de la cuenta #"+cbCuentao.Text+" es $" + valor);
                         }
+                        MessageBox.Show("Transefencia Realizada");
                     }
                     this.oleDbConnection1.Close();
 

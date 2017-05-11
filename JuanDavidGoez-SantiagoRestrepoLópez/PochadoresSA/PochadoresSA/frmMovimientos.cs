@@ -60,8 +60,8 @@ namespace PochadoresSA
                 this.oleDbDataAdapter2.SelectCommand.CommandText = "SELECT * FROM Movimientos WHERE Cuenta = '" + cbCuentaO.Text  + "'";
                 this.oleDbConnection2.Open();
                 this.oleDbDataAdapter2.SelectCommand.Connection = oleDbConnection2;
-                DataTable cuenta = new DataTable();
-                this.oleDbDataAdapter2.Fill(cuenta);
+                DataTable fecha = new DataTable();
+                this.oleDbDataAdapter2.Fill(fecha);
 
                 DataTable valor = new DataTable();
                  this.oleDbDataAdapter2.Fill(valor);
@@ -73,8 +73,8 @@ namespace PochadoresSA
                 while (reader2.Read())
                 {
                     
-                    lbCuenta.DataSource = cuenta;
-                    lbCuenta.DisplayMember = "Cuenta";
+                    lbCuenta.DataSource = fecha;
+                    lbCuenta.DisplayMember = "Fecha";
                     lbCuenta.ValueMember = "Id";
 
                    
@@ -98,6 +98,8 @@ namespace PochadoresSA
             
 
         }
+
+        
     }
     
 }

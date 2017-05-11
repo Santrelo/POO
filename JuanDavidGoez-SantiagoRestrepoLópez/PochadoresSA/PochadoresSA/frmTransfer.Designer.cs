@@ -53,6 +53,7 @@
             this.oleDbDeleteCommand3 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter3 = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbConnection3 = new System.Data.OleDb.OleDbConnection();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -152,11 +153,20 @@
             this.oleDbConnection3.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
     "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(65, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(195, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.Visible = false;
+            // 
             // frmTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 301);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbCuentao);
             this.Controls.Add(this.btnTransferir);
             this.Controls.Add(this.cbCuentad);
@@ -199,5 +209,6 @@
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand3;
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter3;
         private System.Data.OleDb.OleDbConnection oleDbConnection3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

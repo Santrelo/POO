@@ -45,6 +45,9 @@
             this.oleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter2 = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbConnection2 = new System.Data.OleDb.OleDbConnection();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // oleDbDataAdapter1
@@ -80,15 +83,15 @@
             // lbCuenta
             // 
             this.lbCuenta.FormattingEnabled = true;
-            this.lbCuenta.Location = new System.Drawing.Point(27, 53);
+            this.lbCuenta.Location = new System.Drawing.Point(57, 120);
             this.lbCuenta.Name = "lbCuenta";
-            this.lbCuenta.Size = new System.Drawing.Size(110, 134);
+            this.lbCuenta.Size = new System.Drawing.Size(191, 134);
             this.lbCuenta.TabIndex = 2;
             // 
             // lbValor
             // 
             this.lbValor.FormattingEnabled = true;
-            this.lbValor.Location = new System.Drawing.Point(143, 53);
+            this.lbValor.Location = new System.Drawing.Point(254, 120);
             this.lbValor.Name = "lbValor";
             this.lbValor.Size = new System.Drawing.Size(110, 134);
             this.lbValor.TabIndex = 3;
@@ -96,7 +99,7 @@
             // lbObser
             // 
             this.lbObser.FormattingEnabled = true;
-            this.lbObser.Location = new System.Drawing.Point(259, 53);
+            this.lbObser.Location = new System.Drawing.Point(370, 120);
             this.lbObser.Name = "lbObser";
             this.lbObser.Size = new System.Drawing.Size(110, 134);
             this.lbObser.TabIndex = 4;
@@ -113,11 +116,41 @@
             this.oleDbConnection2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
     "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Fecha";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(251, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Valor";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(367, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cuenta Destino";
+            // 
             // frmMovimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 253);
+            this.ClientSize = new System.Drawing.Size(492, 285);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbObser);
             this.Controls.Add(this.lbValor);
             this.Controls.Add(this.lbCuenta);
@@ -127,6 +160,7 @@
             this.Text = "frmMovimientos";
             this.Load += new System.EventHandler(this.frmMovimientos_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -149,5 +183,8 @@
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand2;
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter2;
         private System.Data.OleDb.OleDbConnection oleDbConnection2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
