@@ -80,6 +80,12 @@ namespace PochadoresSA
 
         }
 
-      
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmVincular log = new FrmVincular();
+            this.Hide();
+            FrmAdmin log1 = new FrmAdmin();
+            log1.Show();
+        }
     }
 }

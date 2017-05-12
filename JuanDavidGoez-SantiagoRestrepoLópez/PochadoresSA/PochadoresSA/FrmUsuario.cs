@@ -44,5 +44,14 @@ namespace PochadoresSA
             FrmUsuario log1 = new FrmUsuario(nombre);
             this.Hide();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+
+            FrmUsuario log1 = new FrmUsuario(nombre);
+            this.Hide();
+        }
     }
 }

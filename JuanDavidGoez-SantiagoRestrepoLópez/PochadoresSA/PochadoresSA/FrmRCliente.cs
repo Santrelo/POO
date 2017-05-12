@@ -111,36 +111,48 @@ namespace PochadoresSA
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            try
+            String nombre = txbUsuario.Text;
+            this.oleDbDataAdapter1.SelectCommand.CommandText = "SELECT * FROM Usuarios WHERE Usuario = '" + nombre + "'";
+            this.oleDbConnection1.Open();
+            this.oleDbDataAdapter1.SelectCommand.Connection = oleDbConnection1;
+            OleDbDataReader reader = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
+            while (reader.Read())
             {
-                this.oleDbDataAdapter1.UpdateCommand.CommandText =
-                     "UPDATE Usuarios SET " +
-                    " Contraseña ='" + this.txbContraseña.Text +
-                    "', Cedula ='" + this.txbCedula.Text +
-                    "', Nombre ='" + this.txbNombre.Text +
-                    "', Direccion ='" + this.txbDireccion.Text +
-                    "', Telefono ='" + this.txbTelefono.Text + "', Email ='" +
-                    this.txbEmail.Text + "'" +
-                    " WHERE  TipoPersona =" + "user";
+                int id = Convert.ToInt32(reader["Id"].ToString());
+                try
+                {
+                    this.oleDbDataAdapter2.UpdateCommand.CommandText =
+                         "UPDATE Usuarios SET " +
+                        " Contraseña ='" + this.txbContraseña.Text +
+                        "', Cedula ='" + this.txbCedula.Text +
+                        "', Nombre ='" + this.txbNombre.Text +
+                        "', Direccion ='" + this.txbDireccion.Text +
+                        "', Telefono ='" + this.txbTelefono.Text + "', Email ='" +
+                        this.txbEmail.Text + "'" +
+                        " WHERE  Id =" + id;
 
-                this.oleDbConnection1.Open();
-                this.oleDbDataAdapter1.UpdateCommand.Connection = oleDbConnection1;
-                this.oleDbDataAdapter1.UpdateCommand.ExecuteNonQuery();
-                this.oleDbConnection1.Close();
-                MessageBox.Show("Registro actualizado correctamente.");
-                this.txbUsuario.Text = "";
-                this.txbContraseña.Text = "";
-                this.txbCedula.Text = "";
-                this.txbNombre.Text = "";
-                this.txbDireccion.Text = "";
-                this.txbTelefono.Text = "";
-                this.txbEmail.Text = "";
+                    this.oleDbConnection2.Open();
+                    this.oleDbDataAdapter2.UpdateCommand.Connection = oleDbConnection2;
+                    this.oleDbDataAdapter2.UpdateCommand.ExecuteNonQuery();
+                    this.oleDbConnection2.Close();
+                    MessageBox.Show("Registro actualizado correctamente.");
+                    this.txbUsuario.Text = "";
+                    this.txbContraseña.Text = "";
+                    this.txbCedula.Text = "";
+                    this.txbNombre.Text = "";
+                    this.txbDireccion.Text = "";
+                    this.txbTelefono.Text = "";
+                    this.txbEmail.Text = "";
+                }
+                catch (System.Data.OleDb.OleDbException exp)
+                {
+                    this.oleDbConnection2.Close();
+                    MessageBox.Show(exp.ToString());
+                }
+
             }
-            catch (System.Data.OleDb.OleDbException exp)
-            {
-                this.oleDbConnection1.Close();
-                MessageBox.Show(exp.ToString());
-            }
+            this.oleDbConnection1.Close();
+            
 
         }
     }

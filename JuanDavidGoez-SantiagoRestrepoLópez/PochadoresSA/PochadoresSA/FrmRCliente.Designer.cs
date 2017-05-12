@@ -53,6 +53,12 @@
             this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.oleDbSelectCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbInsertCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand2 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter2 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbConnection2 = new System.Data.OleDb.OleDbConnection();
             this.SuspendLayout();
             // 
             // txbContraseña
@@ -229,6 +235,18 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Nombre        :";
             // 
+            // oleDbDataAdapter2
+            // 
+            this.oleDbDataAdapter2.DeleteCommand = this.oleDbDeleteCommand2;
+            this.oleDbDataAdapter2.InsertCommand = this.oleDbInsertCommand2;
+            this.oleDbDataAdapter2.SelectCommand = this.oleDbSelectCommand2;
+            this.oleDbDataAdapter2.UpdateCommand = this.oleDbUpdateCommand2;
+            // 
+            // oleDbConnection2
+            // 
+            this.oleDbConnection2.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
+    "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
+            // 
             // FrmRCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +305,11 @@
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label label5;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand2;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand2;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter2;
+        private System.Data.OleDb.OleDbConnection oleDbConnection2;
     }
 }

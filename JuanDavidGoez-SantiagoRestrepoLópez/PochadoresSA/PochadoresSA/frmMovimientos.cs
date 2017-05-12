@@ -99,7 +99,14 @@ namespace PochadoresSA
 
         }
 
-        
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmUsuario log = new FrmUsuario(nombre);
+            log.Show();
+
+            frmMovimientos log1 = new frmMovimientos(nombre);
+            this.Hide();
+        }
     }
     
 }

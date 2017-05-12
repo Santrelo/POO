@@ -73,7 +73,7 @@
             // 
             // txbNumCuenta
             // 
-            this.txbNumCuenta.Location = new System.Drawing.Point(160, 85);
+            this.txbNumCuenta.Location = new System.Drawing.Point(160, 70);
             this.txbNumCuenta.Name = "txbNumCuenta";
             this.txbNumCuenta.Size = new System.Drawing.Size(211, 20);
             this.txbNumCuenta.TabIndex = 28;
@@ -91,7 +91,6 @@
             // 
             this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
     "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
-            
             // 
             // oleDbDataAdapter1
             // 

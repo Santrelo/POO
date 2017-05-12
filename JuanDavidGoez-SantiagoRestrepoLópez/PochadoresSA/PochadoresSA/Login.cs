@@ -13,7 +13,11 @@ namespace PochadoresSA
 {
     public partial class Login : Form
     {
+
+        string contra;
+        string a;
        
+
         public Login()
         {
             InitializeComponent();
@@ -23,6 +27,8 @@ namespace PochadoresSA
 
         public void btnIngresar_Click(object sender, EventArgs e)
         {
+
+            //MessageBox.Show(a);
             String nombre = txbUsuario.Text;
             String clave = txbContraseña.Text;
             String tipo = "admin";
@@ -63,7 +69,7 @@ namespace PochadoresSA
 
                         while (reader.Read())
                         {
-                           
+
                             FrmAdmin log = new FrmAdmin();
                             log.Show();
                             Login cerrar = new Login();
@@ -89,13 +95,13 @@ namespace PochadoresSA
                     OleDbDataReader reader = this.oleDbDataAdapter1.SelectCommand.ExecuteReader();
 
                     Boolean ExistenciaRegistro = reader.HasRows;
-                    
+
                     if (ExistenciaRegistro)
                     {
 
                         while (reader.Read())
                         {
-                           
+
 
 
 
@@ -103,7 +109,7 @@ namespace PochadoresSA
                             log.Show();
                             Login cerrar = new Login();
                             this.Hide();
-                          
+
 
                         }
 
@@ -134,7 +140,7 @@ namespace PochadoresSA
                         {
 
                             MessageBox.Show("Usuario no Existe");
-                            
+
                         }
                         this.oleDbConnection1.Close();
                     }
@@ -142,13 +148,92 @@ namespace PochadoresSA
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        public void Login_Load(object sender, EventArgs e)
         {
 
         }
-    }
 
-   
+        public void button1_Click(object sender, EventArgs e)
+        {
+            contra = a + "1";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            contra = a + "2";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            contra = a + "3";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            contra = a + "4";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            contra = a + "5";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            contra = a + "6";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            contra = a + "7";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            contra = a + "8";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            contra = a + "9";
+            a = contra;
+            txbContraseña.Text = a;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            txbContraseña.Text = "";
+            contra = "";
+            a = "";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            int s = a.Length;
+            contra = a.Remove(s - 1, 1);
+            a = contra;
+            txbContraseña.Text = a;
+        }
+      
+
+
+    }
 }
 
 

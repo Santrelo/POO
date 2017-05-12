@@ -54,6 +54,13 @@
             this.oleDbDataAdapter3 = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbConnection3 = new System.Data.OleDb.OleDbConnection();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.oleDbSelectCommand4 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbInsertCommand4 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbUpdateCommand4 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDeleteCommand4 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbDataAdapter4 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbConnection4 = new System.Data.OleDb.OleDbConnection();
             this.SuspendLayout();
             // 
             // label1
@@ -159,13 +166,35 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(195, 20);
             this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.Visible = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(267, 240);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(89, 29);
+            this.btnSalir.TabIndex = 27;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // oleDbDataAdapter4
+            // 
+            this.oleDbDataAdapter4.DeleteCommand = this.oleDbDeleteCommand4;
+            this.oleDbDataAdapter4.InsertCommand = this.oleDbInsertCommand4;
+            this.oleDbDataAdapter4.SelectCommand = this.oleDbSelectCommand4;
+            this.oleDbDataAdapter4.UpdateCommand = this.oleDbUpdateCommand4;
+            // 
+            // oleDbConnection4
+            // 
+            this.oleDbConnection4.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\JuanDavidGoez-SantiagoRestrepoLó" +
+    "pez\\PochadoresSA\\PochadoresSA\\DbPonchadores1.accdb";
             // 
             // frmTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 301);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbCuentao);
             this.Controls.Add(this.btnTransferir);
@@ -210,5 +239,12 @@
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter3;
         private System.Data.OleDb.OleDbConnection oleDbConnection3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Data.OleDb.OleDbCommand oleDbSelectCommand4;
+        private System.Data.OleDb.OleDbCommand oleDbInsertCommand4;
+        private System.Data.OleDb.OleDbCommand oleDbUpdateCommand4;
+        private System.Data.OleDb.OleDbCommand oleDbDeleteCommand4;
+        private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter4;
+        private System.Data.OleDb.OleDbConnection oleDbConnection4;
     }
 }

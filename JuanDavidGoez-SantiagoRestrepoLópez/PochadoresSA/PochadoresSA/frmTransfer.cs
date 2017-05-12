@@ -86,131 +86,149 @@ namespace PochadoresSA
 
                     while (reader.Read())
                     {
-                        int actual = Convert.ToInt32(reader["Id"].ToString());
-                        int valor = Convert.ToInt32(reader["Valor"].ToString());
-                        int valor2 = Convert.ToInt32(cbValor.Text);
-                        if (valor >= valor2)
+                        this.oleDbDataAdapter4.SelectCommand.CommandText = "SELECT * FROM Vincular WHERE Cuenta = '" + cbCuentad.Text +  "';";
+                        this.oleDbConnection4.Open();
+
+                        this.oleDbDataAdapter4.SelectCommand.Connection = oleDbConnection4;
+
+                        OleDbDataReader reader4 = this.oleDbDataAdapter4.SelectCommand.ExecuteReader();
+                        if (reader4.Read())
                         {
-                            int total = valor - valor2;
-                            MessageBox.Show("Saldo de la cuenta #"+cbCuentao.Text+" es #"+valor);
-                            //quitar saldo. 
-                            try
+                            int actual = Convert.ToInt32(reader["Id"].ToString());
+                            int valor = Convert.ToInt32(reader["Valor"].ToString());
+                            int valor2 = Convert.ToInt32(cbValor.Text);
+                            if (valor >= valor2)
                             {
-                                this.oleDbDataAdapter2.UpdateCommand.CommandText =
-                                    "UPDATE Vincular SET " +
-                                    "Valor ='" + total.ToString() +
-                                     "'" +
-                                    " WHERE  Id =" + actual;
-                                this.oleDbConnection2.Open();
-                                this.oleDbDataAdapter2.UpdateCommand.Connection = oleDbConnection2;
-                                this.oleDbDataAdapter2.UpdateCommand.ExecuteNonQuery();
-                                MessageBox.Show("El Nuevo Saldo de la cuenta #" + cbCuentao.Text + " es #" + total);
-                                this.oleDbConnection2.Close();
-                                
-                            }
-                            catch (System.Data.OleDb.OleDbException exp)
-                            {
-                                this.oleDbConnection2.Close();
-                                MessageBox.Show(exp.ToString());
-                            }
-                           
-                            //agregar movimiento a cuenta principal.
-                            try
-                            {
-                                int resta = -(Convert.ToInt32(cbValor.Text));
-                                string hola = "de "+ cbCuentad.Text;
-                                this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "','" + actual + "','" + dateTimePicker1.Text + "')";
-                                this.oleDbConnection2.Open();
-                                this.oleDbDataAdapter2.InsertCommand.Connection = oleDbConnection2;
-                                this.oleDbDataAdapter2.InsertCommand.ExecuteNonQuery();
-                                this.oleDbConnection2.Close();
-                               
-                            }
-                            catch (System.Data.OleDb.OleDbException exp)
-                            {
-                                this.oleDbConnection2.Close();
-
-                                MessageBox.Show(exp.ToString());
-                            }
-                            //agregamos el saldo a la cuenta destino
-
-                            this.oleDbDataAdapter2.SelectCommand.CommandText = "SELECT Valor,Id FROM Vincular WHERE Cuenta = '" + cbCuentad.Text +  "';";
-                            this.oleDbConnection2.Open();
-
-                            this.oleDbDataAdapter2.SelectCommand.Connection = oleDbConnection2;
-
-                            OleDbDataReader reader1 = this.oleDbDataAdapter2.SelectCommand.ExecuteReader();
-
-                            Boolean ExistenciaRegistro1 = reader1.HasRows;
-
-                            if (ExistenciaRegistro1)
-                            {
-
-                                while (reader1.Read())
+                                int total = valor - valor2;
+                                MessageBox.Show("Saldo de la cuenta #" + cbCuentao.Text + " es #" + valor);
+                                //quitar saldo. 
+                                try
                                 {
-                                    int id = Convert.ToInt32(reader1["Id"].ToString());
-                                    int valor1 = Convert.ToInt32(reader1["Valor"].ToString());
-                                    
+                                    this.oleDbDataAdapter2.UpdateCommand.CommandText =
+                                        "UPDATE Vincular SET " +
+                                        "Valor ='" + total.ToString() +
+                                         "'" +
+                                        " WHERE  Id =" + actual;
+                                    this.oleDbConnection2.Open();
+                                    this.oleDbDataAdapter2.UpdateCommand.Connection = oleDbConnection2;
+                                    this.oleDbDataAdapter2.UpdateCommand.ExecuteNonQuery();
+                                    MessageBox.Show("El Nuevo Saldo de la cuenta #" + cbCuentao.Text + " es #" + total);
+                                    this.oleDbConnection2.Close();
 
-                                    int total1 = valor1 + valor2;
-                                    MessageBox.Show("Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + valor1);
-                                    MessageBox.Show("El nuevo Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + total1);
-                                    //agregar  saldo. 
-                                    try
-                                    {
-                                        this.oleDbDataAdapter3.UpdateCommand.CommandText =
-                                            "UPDATE Vincular SET " +
-                                            "Valor ='" + total1.ToString() +
-                                             "'" +
-                                            " WHERE  Id =" + id;
-                                        this.oleDbConnection3.Open();
-                                        this.oleDbDataAdapter3.UpdateCommand.Connection = oleDbConnection3;
-                                        this.oleDbDataAdapter3.UpdateCommand.ExecuteNonQuery();
-                                        this.oleDbConnection3.Close();
-                                       
-                                    }
-                                    catch (System.Data.OleDb.OleDbException exp)
-                                    {
-                                        this.oleDbConnection3.Close();
-                                        MessageBox.Show(exp.ToString());
-                                    }
-                                    //agregar movimiento a cuenta destino.
-                                    try
-                                    {
-                                        int resta = +(Convert.ToInt32(cbValor.Text));
-                                        string hola = "de "+ cbCuentao.Text;
-                                        this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "','" + id + "','" + dateTimePicker1.Text+ "')";
-                                        this.oleDbConnection3.Open();
-                                        this.oleDbDataAdapter3.InsertCommand.Connection = oleDbConnection3;
-                                        this.oleDbDataAdapter3.InsertCommand.ExecuteNonQuery();
-                                        this.oleDbConnection3.Close();
-                                       
-                                    }
-                                    catch (System.Data.OleDb.OleDbException exp)
-                                    {
-                                        this.oleDbConnection3.Close();
+                                }
+                                catch (System.Data.OleDb.OleDbException exp)
+                                {
+                                    this.oleDbConnection2.Close();
+                                    MessageBox.Show(exp.ToString());
+                                }
 
-                                        MessageBox.Show(exp.ToString());
+                                //agregar movimiento a cuenta principal.
+                                try
+                                {
+                                    string fecha = dateTimePicker1.Text;
+
+                                    int resta = -(Convert.ToInt32(cbValor.Text));
+                                    string hola = "de " + cbCuentad.Text;
+                                    this.oleDbDataAdapter2.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentao.Text + "','" + resta.ToString() + "' , '" + hola + "','" + actual + "','" + fecha + "')";
+                                    this.oleDbConnection2.Open();
+                                    this.oleDbDataAdapter2.InsertCommand.Connection = oleDbConnection2;
+                                    this.oleDbDataAdapter2.InsertCommand.ExecuteNonQuery();
+                                    this.oleDbConnection2.Close();
+
+                                }
+                                catch (System.Data.OleDb.OleDbException exp)
+                                {
+                                    this.oleDbConnection2.Close();
+
+                                    MessageBox.Show(exp.ToString());
+                                }
+                                //agregamos el saldo a la cuenta destino
+
+                                this.oleDbDataAdapter2.SelectCommand.CommandText = "SELECT Valor,Id FROM Vincular WHERE Cuenta = '" + cbCuentad.Text + "';";
+                                this.oleDbConnection2.Open();
+
+                                this.oleDbDataAdapter2.SelectCommand.Connection = oleDbConnection2;
+
+                                OleDbDataReader reader1 = this.oleDbDataAdapter2.SelectCommand.ExecuteReader();
+
+                                Boolean ExistenciaRegistro1 = reader1.HasRows;
+
+                                if (ExistenciaRegistro1)
+                                {
+
+                                    while (reader1.Read())
+                                    {
+                                        int id = Convert.ToInt32(reader1["Id"].ToString());
+                                        int valor1 = Convert.ToInt32(reader1["Valor"].ToString());
+
+
+                                        int total1 = valor1 + valor2;
+                                        MessageBox.Show("Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + valor1);
+                                        MessageBox.Show("El nuevo Saldo de la cuenta destino #" + cbCuentad.Text + " es #" + total1);
+                                        //agregar  saldo. 
+                                        try
+                                        {
+                                            this.oleDbDataAdapter3.UpdateCommand.CommandText =
+                                                "UPDATE Vincular SET " +
+                                                "Valor ='" + total1.ToString() +
+                                                 "'" +
+                                                " WHERE  Id =" + id;
+                                            this.oleDbConnection3.Open();
+                                            this.oleDbDataAdapter3.UpdateCommand.Connection = oleDbConnection3;
+                                            this.oleDbDataAdapter3.UpdateCommand.ExecuteNonQuery();
+                                            this.oleDbConnection3.Close();
+
+                                        }
+                                        catch (System.Data.OleDb.OleDbException exp)
+                                        {
+                                            this.oleDbConnection3.Close();
+                                            MessageBox.Show(exp.ToString());
+                                        }
+                                        //agregar movimiento a cuenta destino.
+                                        try
+                                        {
+                                            int resta = +(Convert.ToInt32(cbValor.Text));
+                                            string hola = "de " + cbCuentao.Text;
+                                            this.oleDbDataAdapter3.InsertCommand.CommandText = "INSERT INTO Movimientos (Cuenta, Valor, Observacion,Id,Fecha) VALUES ('" + cbCuentad.Text + "','" + resta.ToString() + "' , '" + hola + "','" + id + "','" + dateTimePicker1.Text + "')";
+                                            this.oleDbConnection3.Open();
+                                            this.oleDbDataAdapter3.InsertCommand.Connection = oleDbConnection3;
+                                            this.oleDbDataAdapter3.InsertCommand.ExecuteNonQuery();
+                                            this.oleDbConnection3.Close();
+
+                                        }
+                                        catch (System.Data.OleDb.OleDbException exp)
+                                        {
+                                            this.oleDbConnection3.Close();
+
+                                            MessageBox.Show(exp.ToString());
+                                        }
+
+
                                     }
 
+                                }
+                                else
+                                {
+                                    this.oleDbConnection2.Close();
 
                                 }
 
+
                             }
+
                             else
                             {
-                                this.oleDbConnection2.Close();
-
+                                MessageBox.Show("No es posible tranferir esta cantidad debido a que el saldo de la cuenta #" + cbCuentao.Text + " es $" + valor);
                             }
-                            
 
+                            MessageBox.Show("Transefencia Realizada");
+                            this.oleDbConnection4.Close();
                         }
-
                         else
                         {
-                            MessageBox.Show("No es posible tranferir esta cantidad debido a que el saldo de la cuenta #"+cbCuentao.Text+" es $" + valor);
+                            this.oleDbConnection4.Close();
+                            MessageBox.Show("Cuenta destino no Existe");
                         }
-                        MessageBox.Show("Transefencia Realizada");
                     }
                     this.oleDbConnection1.Close();
 
@@ -228,6 +246,12 @@ namespace PochadoresSA
 
         }
 
-       
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            frmTransfer log = new frmTransfer(nombre);
+            this.Hide();
+            FrmUsuario log1 = new FrmUsuario(nombre);
+            log1.Show();
+        }
     }
 }
