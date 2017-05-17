@@ -137,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DbPonchadores1DataSet.xsc">
       <DependentUpon>DbPonchadores1DataSet.xsd</DependentUpon>
@@ -177,6 +178,15 @@
     <Content Include="DbPonchadores1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\movimientos.png" />
+    <None Include="Resources\transferir.png" />
+    <None Include="Resources\frmcliente.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\vcuenta.png" />
+    <None Include="Resources\rcuenta.png" />
+    <None Include="Resources\rcliente1.png" />
+    <None Include="Resources\rcliente.png" />
+    <None Include="Resources\frmadmin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

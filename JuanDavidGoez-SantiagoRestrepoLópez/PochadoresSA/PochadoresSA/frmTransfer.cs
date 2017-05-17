@@ -253,5 +253,10 @@ namespace PochadoresSA
             FrmUsuario log1 = new FrmUsuario(nombre);
             log1.Show();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

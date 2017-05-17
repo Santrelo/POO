@@ -63,148 +63,192 @@
             // 
             // txbContraseña
             // 
-            this.txbContraseña.Location = new System.Drawing.Point(101, 57);
+            this.txbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbContraseña.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbContraseña.Location = new System.Drawing.Point(327, 182);
             this.txbContraseña.Name = "txbContraseña";
-            this.txbContraseña.Size = new System.Drawing.Size(211, 20);
+            this.txbContraseña.Size = new System.Drawing.Size(211, 16);
             this.txbContraseña.TabIndex = 8;
             // 
             // txbUsuario
             // 
-            this.txbUsuario.Location = new System.Drawing.Point(101, 23);
+            this.txbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbUsuario.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUsuario.Location = new System.Drawing.Point(327, 144);
             this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.Size = new System.Drawing.Size(211, 20);
+            this.txbUsuario.Size = new System.Drawing.Size(211, 16);
             this.txbUsuario.TabIndex = 7;
             // 
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(28, 57);
+            this.lblClave.BackColor = System.Drawing.Color.White;
+            this.lblClave.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.Location = new System.Drawing.Point(141, 175);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(67, 13);
+            this.lblClave.Size = new System.Drawing.Size(130, 30);
             this.lblClave.TabIndex = 6;
             this.lblClave.Text = "Contraseña :";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(28, 23);
+            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(141, 135);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(67, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(139, 30);
             this.lblUsuario.TabIndex = 5;
             this.lblUsuario.Text = "Usuario       :";
             // 
             // txbDireccion
             // 
-            this.txbDireccion.Location = new System.Drawing.Point(101, 153);
+            this.txbDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDireccion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDireccion.Location = new System.Drawing.Point(327, 303);
             this.txbDireccion.Name = "txbDireccion";
-            this.txbDireccion.Size = new System.Drawing.Size(211, 20);
+            this.txbDireccion.Size = new System.Drawing.Size(211, 16);
             this.txbDireccion.TabIndex = 12;
             // 
             // txbCedula
             // 
-            this.txbCedula.Location = new System.Drawing.Point(101, 89);
+            this.txbCedula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCedula.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCedula.Location = new System.Drawing.Point(327, 223);
             this.txbCedula.Name = "txbCedula";
-            this.txbCedula.Size = new System.Drawing.Size(211, 20);
+            this.txbCedula.Size = new System.Drawing.Size(211, 16);
             this.txbCedula.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 153);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 295);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(139, 30);
             this.label1.TabIndex = 10;
             this.label1.Text = "Direccion    :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 89);
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(144, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.Size = new System.Drawing.Size(131, 30);
             this.label2.TabIndex = 9;
             this.label2.Text = "Cedula        :";
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(101, 218);
+            this.txbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbEmail.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmail.Location = new System.Drawing.Point(327, 380);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(211, 20);
+            this.txbEmail.Size = new System.Drawing.Size(211, 16);
             this.txbEmail.TabIndex = 16;
             // 
             // txbTelefono
             // 
-            this.txbTelefono.Location = new System.Drawing.Point(101, 184);
+            this.txbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTelefono.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTelefono.Location = new System.Drawing.Point(327, 340);
             this.txbTelefono.Name = "txbTelefono";
-            this.txbTelefono.Size = new System.Drawing.Size(211, 20);
+            this.txbTelefono.Size = new System.Drawing.Size(211, 16);
             this.txbTelefono.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 218);
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 374);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.Size = new System.Drawing.Size(145, 30);
             this.label3.TabIndex = 14;
             this.label3.Text = "Email           :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 184);
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(144, 335);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(133, 30);
             this.label4.TabIndex = 13;
             this.label4.Text = "Telefono     :";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(49, 254);
+            this.btnAgregar.BackColor = System.Drawing.Color.Red;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(140, 430);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(89, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 29);
             this.btnAgregar.TabIndex = 17;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(334, 254);
+            this.btnActualizar.BackColor = System.Drawing.Color.Red;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(457, 430);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(89, 29);
+            this.btnActualizar.Size = new System.Drawing.Size(100, 29);
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(144, 254);
+            this.btnBorrar.BackColor = System.Drawing.Color.Red;
+            this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(246, 430);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(89, 29);
+            this.btnBorrar.Size = new System.Drawing.Size(100, 29);
             this.btnBorrar.TabIndex = 19;
             this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(239, 254);
+            this.btnBuscar.BackColor = System.Drawing.Color.Red;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(352, 430);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(89, 29);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 29);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(404, 294);
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(457, 483);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 29);
+            this.btnSalir.Size = new System.Drawing.Size(100, 29);
             this.btnSalir.TabIndex = 21;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // oleDbConnection1
@@ -221,17 +265,21 @@
             // 
             // txbNombre
             // 
-            this.txbNombre.Location = new System.Drawing.Point(101, 122);
+            this.txbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNombre.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNombre.Location = new System.Drawing.Point(327, 264);
             this.txbNombre.Name = "txbNombre";
-            this.txbNombre.Size = new System.Drawing.Size(211, 20);
+            this.txbNombre.Size = new System.Drawing.Size(211, 16);
             this.txbNombre.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 125);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Harlow Solid Italic", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(141, 255);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.Size = new System.Drawing.Size(148, 30);
             this.label5.TabIndex = 22;
             this.label5.Text = "Nombre        :";
             // 
@@ -251,7 +299,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 335);
+            this.BackgroundImage = global::PochadoresSA.Properties.Resources.rcliente1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(709, 621);
             this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSalir);
@@ -271,6 +321,7 @@
             this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
+            this.DoubleBuffered = true;
             this.Name = "FrmRCliente";
             this.Text = "FrmRCliente";
             this.ResumeLayout(false);

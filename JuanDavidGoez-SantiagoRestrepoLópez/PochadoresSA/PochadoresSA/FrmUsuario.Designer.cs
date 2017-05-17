@@ -35,42 +35,54 @@
             // 
             // btnTransferir
             // 
-            this.btnTransferir.Location = new System.Drawing.Point(76, 54);
+            this.btnTransferir.BackColor = System.Drawing.Color.Red;
+            this.btnTransferir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransferir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransferir.Location = new System.Drawing.Point(145, 178);
             this.btnTransferir.Name = "btnTransferir";
             this.btnTransferir.Size = new System.Drawing.Size(124, 37);
             this.btnTransferir.TabIndex = 0;
             this.btnTransferir.Text = "Transferir";
-            this.btnTransferir.UseVisualStyleBackColor = true;
+            this.btnTransferir.UseVisualStyleBackColor = false;
             this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
             // 
             // btnMovimientos
             // 
-            this.btnMovimientos.Location = new System.Drawing.Point(76, 119);
+            this.btnMovimientos.BackColor = System.Drawing.Color.Red;
+            this.btnMovimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovimientos.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovimientos.Location = new System.Drawing.Point(320, 178);
             this.btnMovimientos.Name = "btnMovimientos";
             this.btnMovimientos.Size = new System.Drawing.Size(124, 37);
             this.btnMovimientos.TabIndex = 1;
             this.btnMovimientos.Text = "Movimientos";
-            this.btnMovimientos.UseVisualStyleBackColor = true;
+            this.btnMovimientos.UseVisualStyleBackColor = false;
             this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(183, 206);
+            this.btnSalir.BackColor = System.Drawing.Color.Red;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(355, 271);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(89, 29);
             this.btnSalir.TabIndex = 28;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = global::PochadoresSA.Properties.Resources.frmcliente;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(609, 418);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMovimientos);
             this.Controls.Add(this.btnTransferir);
+            this.DoubleBuffered = true;
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);

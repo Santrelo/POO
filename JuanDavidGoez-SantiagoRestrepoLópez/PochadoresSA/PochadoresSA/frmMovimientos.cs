@@ -107,6 +107,11 @@ namespace PochadoresSA
             frmMovimientos log1 = new frmMovimientos(nombre);
             this.Hide();
         }
+
+        private void lbObser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
