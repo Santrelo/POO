@@ -16,7 +16,8 @@ namespace PochadoresSA
 
         string contra;
         string a;
-       
+        string x;
+
 
         public Login()
         {
@@ -158,6 +159,8 @@ namespace PochadoresSA
             contra = a + "1";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -165,6 +168,8 @@ namespace PochadoresSA
             contra = a + "2";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -172,6 +177,8 @@ namespace PochadoresSA
             contra = a + "3";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -179,6 +186,8 @@ namespace PochadoresSA
             contra = a + "4";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -186,6 +195,8 @@ namespace PochadoresSA
             contra = a + "5";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -193,6 +204,8 @@ namespace PochadoresSA
             contra = a + "6";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -200,6 +213,8 @@ namespace PochadoresSA
             contra = a + "7";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -207,6 +222,8 @@ namespace PochadoresSA
             contra = a + "8";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -214,6 +231,8 @@ namespace PochadoresSA
             contra = a + "9";
             a = contra;
             txbContraseña.Text = a;
+            x = x + "*";
+            label1.Text = x;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -221,6 +240,8 @@ namespace PochadoresSA
             txbContraseña.Text = "";
             contra = "";
             a = "";
+            x = "";
+            label1.Text = "";
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -229,10 +250,13 @@ namespace PochadoresSA
             contra = a.Remove(s - 1, 1);
             a = contra;
             txbContraseña.Text = a;
+            label1.Text = "*";
         }
-      
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
