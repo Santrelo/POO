@@ -40,9 +40,9 @@
             this.btnRCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRCliente.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnRCliente.Location = new System.Drawing.Point(170, 188);
+            this.btnRCliente.Location = new System.Drawing.Point(171, 180);
             this.btnRCliente.Name = "btnRCliente";
-            this.btnRCliente.Size = new System.Drawing.Size(99, 33);
+            this.btnRCliente.Size = new System.Drawing.Size(99, 48);
             this.btnRCliente.TabIndex = 0;
             this.btnRCliente.Text = "Registrar Cliente";
             this.btnRCliente.UseVisualStyleBackColor = false;
@@ -53,9 +53,9 @@
             this.btnRCuenta.BackColor = System.Drawing.Color.Red;
             this.btnRCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRCuenta.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRCuenta.Location = new System.Drawing.Point(275, 188);
+            this.btnRCuenta.Location = new System.Drawing.Point(276, 180);
             this.btnRCuenta.Name = "btnRCuenta";
-            this.btnRCuenta.Size = new System.Drawing.Size(104, 33);
+            this.btnRCuenta.Size = new System.Drawing.Size(104, 48);
             this.btnRCuenta.TabIndex = 1;
             this.btnRCuenta.Text = "Registrar Cuenta";
             this.btnRCuenta.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             this.btnRVincular.BackColor = System.Drawing.Color.Red;
             this.btnRVincular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRVincular.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRVincular.Location = new System.Drawing.Point(384, 188);
+            this.btnRVincular.Location = new System.Drawing.Point(385, 180);
             this.btnRVincular.Name = "btnRVincular";
-            this.btnRVincular.Size = new System.Drawing.Size(104, 33);
+            this.btnRVincular.Size = new System.Drawing.Size(104, 48);
             this.btnRVincular.TabIndex = 2;
             this.btnRVincular.Text = "Vincular";
             this.btnRVincular.UseVisualStyleBackColor = false;

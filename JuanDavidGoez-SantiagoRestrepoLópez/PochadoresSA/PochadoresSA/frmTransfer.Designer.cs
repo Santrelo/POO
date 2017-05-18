@@ -101,7 +101,7 @@
             // 
             this.cbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cbValor.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbValor.Location = new System.Drawing.Point(339, 217);
+            this.cbValor.Location = new System.Drawing.Point(339, 176);
             this.cbValor.Name = "cbValor";
             this.cbValor.Size = new System.Drawing.Size(207, 20);
             this.cbValor.TabIndex = 4;
@@ -110,7 +110,7 @@
             // 
             this.cbCuentad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cbCuentad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCuentad.Location = new System.Drawing.Point(339, 178);
+            this.cbCuentad.Location = new System.Drawing.Point(339, 219);
             this.cbCuentad.Name = "cbCuentad";
             this.cbCuentad.Size = new System.Drawing.Size(207, 20);
             this.cbCuentad.TabIndex = 5;
@@ -226,6 +226,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "frmTransfer";
             this.Text = "frmTransfer";
             this.Load += new System.EventHandler(this.frmTransfer_Load);
